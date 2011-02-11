@@ -1,0 +1,45 @@
+graphicore FontForge Python Scripts
+Copyright (c) 2011, Lasse Fister lasse@graphicore.de, http://graphicore.de
+
+All rights reserved. This program and the accompanying materials are made
+available under the terms of the BSD which accompanies this distribution, and
+is available at http://www.opensource.org/licenses/bsd-license.php
+
+the file /python/graphicore/ipython_view.py is from
+http://ipython.scipy.org/moin/Cookbook/EmbeddingInGTK
+who got it from the Accerciser project, http://live.gnome.org/accerciser
+
+DESCRIPTION
+***************************************
+This is a collection of currently one(!) Python-Script to be run from within FontForge.
+
+If installed properly the new functions are accessible from the Tools Menu
+
+Tools->Interactive Python Shell
+    start an interactive python shell, you will have live access to the currently open
+    fonts, selection, whatever in your running instance of FontForge.
+
+    The ipython shell will run in a gtk-Window
+
+    paste and run the following line of python code (everything after >>>)
+    into the shell to see a list of all open glyphs:
+        >>>for glyph in fontforge.activeFont(): print glyph
+
+    see http://fontforge.sourceforge.net/python.html for your possibilities
+
+    Good Luck
+
+DEPENDENCIES
+***************************************
+you will need (by debian package names and url):
+   * fontforge, python_fontforge (http://fontforge.sourceforge.net)
+   * python-gtk2 (http://www.pygtk.org/)
+   * ipython (http://ipython.scipy.org)
+
+INSTALLATION
+***************************************
+To use these Scripts place a copy or a symlink of "./python/graphicore.py" and
+the folder "./python/graphicore" with all its contents into
+"$(PREFIX)/share/fontforge/python" or "~/.FontForge/python"
+
+see http://fontforge.sourceforge.net/python.html#python-init-scripts for more
